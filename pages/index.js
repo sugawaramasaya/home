@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -8,6 +10,16 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div
+        sx={{
+          fontWeight: 'bold',
+          fontSize: 4, // picks up value from `theme.fontSizes[4]`
+          color: 'primary', // picks up value from `theme.colors.primary`
+        }}
+      >
+        Hello
+      </div>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
@@ -61,5 +73,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
