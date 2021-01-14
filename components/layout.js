@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const name = 'SUGAWARA Masaya';
 export const siteTitle = 'すがわらのホムペ';
 
 const Layout = ({ children, home }) => {
   return (
     <>
       <Head>
+        <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -23,28 +23,22 @@ const Layout = ({ children, home }) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header>
-        {home ? (
-          <>
-            <h1>{name}</h1>
-          </>
-        ) : (
-          <>
-            <h2>
-              <Link href="/">
-                <a>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
+        <h1>
+          <Link href="/">
+            <a>{siteTitle}</a>
+          </Link>
+        </h1>
       </header>
       <main>{children}</main>
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <footer>
+        {!home && (
+          <div>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        )}
+      </footer>
     </>
   );
 };
