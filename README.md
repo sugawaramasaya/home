@@ -42,3 +42,12 @@ import { jsx } from 'theme-ui';
 ```
 
 [link](https://github.com/system-ui/theme-ui/issues/1160#issuecomment-715530924)
+
+# 開発環境の立ち上げ
+
+yarn dev
+
+# ローカルで本番環境を確認する手順
+
+yarn build
+yarn start
