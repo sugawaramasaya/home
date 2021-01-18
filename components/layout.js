@@ -9,6 +9,7 @@ const Layout = ({ children, home }) => {
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
